@@ -11,7 +11,7 @@ class Scraper:
 
     def parse(self):
         response = requests.get(self.url)
-        self.soup = BeautifulSoup(response.text, 'lxml')
+        self.soup = BeautifulSoup(response.text, 'html.parser')
 
     @staticmethod
     def extract_text_from_element(ele, tag, attrs):

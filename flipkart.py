@@ -3,17 +3,17 @@ from scraper import Scraper
 
 class Flipkart(Scraper):
     def get_details(self, additional=False):
-        product_details = self.soup.find('div', {'class': 'aMaAEs'})
+        product_details = self.soup.find('div', {'class': 'yN+eNk'})
 
         self.title = self.extract_text_from_element(
-            product_details, 'h1', {'class': 'yhB1nd'})
+            product_details, 'h1', {'class': '_6EBuvT'})
 
         self.price = self.extract_text_from_element(
-            product_details, 'div', {'class': '_30jeq3 _16Jk6d'}
+            product_details, 'div', {'class': 'Nx9bqj CxhGGd'}
         )
 
         self.mrp = self.extract_text_from_element(
-            product_details, 'div', {'class': '_3I9_wc _2p6lqe'}
+            product_details, 'div', {'class': 'yN+eNk'}
         )
 
         result = {
